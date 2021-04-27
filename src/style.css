@@ -1,0 +1,9 @@
+h1, p {
+    font-family: Lato;
+  }
+
+#new{
+  border: 1px solid black;
+  display: inline-block;
+  background-color: gray;
+}

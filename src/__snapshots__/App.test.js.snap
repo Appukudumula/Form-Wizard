@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots App snapshots 1`] = `
+<div>
+  <MainForm />
+</div>
+`;
+
+exports[`snapshots CompletedForm snapshots 1`] = `<Connect(ReduxForm) />`;
+
+exports[`snapshots EmailForm snapshots 1`] = `
+<Connect(Form(EmailForm))
+  destroyOnUnmount={false}
+  enableReinitialize={false}
+  forceUnregisterOnUnmount={true}
+  form="wizardForm"
+  getFormState={[Function]}
+  keepDirtyOnReinitialize={false}
+  persistentSubmitErrors={false}
+  pure={true}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
+/>
+`;
+
+exports[`snapshots MainForm snapshots 1`] = `
+<Card
+  tag="div"
+>
+  <Stepper
+    activeStep={0}
+    steps={
+      Array [
+        Object {
+          "title": "Personal Details",
+        },
+        Object {
+          "title": "Address Details",
+        },
+        Object {
+          "title": "Completed Details",
+        },
+      ]
+    }
+  />
+  <ReduxForm
+    onSubmit={[Function]}
+  />
+</Card>
+`;
+
+exports[`snapshots PersonalDetailsForm snapshots 1`] = `
+<Connect(Form(PersonalDetailsForm))
+  destroyOnUnmount={false}
+  enableReinitialize={false}
+  forceUnregisterOnUnmount={true}
+  form="wizardForm"
+  getFormState={[Function]}
+  keepDirtyOnReinitialize={false}
+  persistentSubmitErrors={false}
+  pure={true}
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
+/>
+`;
