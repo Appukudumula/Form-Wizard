@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import rootReducer from '../reducers';
+import rootReducer from '../../FormWizard/reducers';
 
 const store = createStore(rootReducer);
 export default store;

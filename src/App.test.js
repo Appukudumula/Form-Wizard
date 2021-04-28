@@ -1,10 +1,10 @@
 import React from 'react';
 import App from "./App";
-import EmailForm from "./FormWizard/EmailForm";
+import EmailForm from "./FormWizard/components/EmailForm";
 import { shallow } from "enzyme";
-import MainForm from './FormWizard/MainForm';
-import CompletedForm from './FormWizard/CompletedForm';
-import PersonalDetailsForm from './FormWizard/PersonalDetailsForm';
+import MainForm from './FormWizard/components/MainForm';
+import CompletedForm from './FormWizard/components/CompletedForm';
+import PersonalDetailsForm from './FormWizard/components/PersonalDetailsForm';
 import toJson from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
@@ -22,10 +22,14 @@ describe("rendering components", () => {
     expect(wrapper.contains(header)).toEqual(true);
   });
   it("renders EmailForm component without crashing", () => {
-    shallow(<EmailForm />);
+    shallow(<Provider store={store}>
+      <EmailForm />
+    </Provider>);
   });
   it("renders MainForm component without crashing", () => {
-    shallow(<MainForm />);
+    shallow(<Provider store={store}>
+      <MainForm />
+    </Provider>);
   });
   it("renders CompletedForm component without throwing an error", () => {
     shallow(<Provider store={store}>
@@ -33,7 +37,9 @@ describe("rendering components", () => {
     </Provider>);
   });
   it("renders PersonalDetailsForm component without crashing", () => {
-    shallow(<PersonalDetailsForm />);
+    shallow(<Provider store={store}>
+      <PersonalDetailsForm />
+    </Provider>);
   });
 })
 
@@ -43,15 +49,21 @@ describe("snapshots", () => {
     expect(toJson(tree)).toMatchSnapshot();
   })
   it("EmailForm snapshots", () => {
-    const emailFormTree = shallow(<EmailForm />);
+    const emailFormTree = shallow(<Provider store={store}>
+      <EmailForm />
+    </Provider>);
     expect(toJson(emailFormTree)).toMatchSnapshot();
   })
   it("MainForm snapshots", () => {
-    const mainFormTree = shallow(<MainForm />);
+    const mainFormTree = shallow(<Provider store={store}>
+      <MainForm />
+    </Provider>);
     expect(toJson(mainFormTree)).toMatchSnapshot();
   })
   it("PersonalDetailsForm snapshots", () => {
-    const personalDetailsFormTree = shallow(<PersonalDetailsForm />);
+    const personalDetailsFormTree = shallow(<Provider store={store}>
+      <PersonalDetailsForm />
+    </Provider>);
     expect(toJson(personalDetailsFormTree)).toMatchSnapshot();
   })
   it("CompletedForm snapshots", () => {

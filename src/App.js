@@ -1,7 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import './App.css';
-import MainForm from '../src/FormWizard/MainForm';
-import './scss/style.css';
+import MainForm from '../src/FormWizard/components/MainForm';
 
 function App() {
   return (
